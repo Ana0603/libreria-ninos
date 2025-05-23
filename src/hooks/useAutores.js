@@ -5,8 +5,7 @@ import { useState, useEffect } from 'react';
 const useAutores = () => {
   const [autoresData, setAutoresData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+  
   useEffect(() => {
     const fetchAutores = async () => {
         setLoading(true);
@@ -16,9 +15,8 @@ const useAutores = () => {
         if (!response.ok) throw new Error('Error al obtener los datos');
         const data = await response.json();
         setAutoresData(data);
-      } catch (err) {
-        setError(err);
-      } finally {
+      } 
+       finally {
         setLoading(false);
       }
     };
@@ -26,6 +24,6 @@ const useAutores = () => {
     fetchAutores();
   }, []);
 
-  return { autoresData, loading, error };
+  return { autoresData, loading};
 }
 export default useAutores;

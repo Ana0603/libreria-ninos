@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { useContext } from "react";
+
 import { AuthContext } from "./context/AuthContext";
-
-
 
 import Header from "./components/Header";
 import Login from "./components/Login";
@@ -32,7 +30,7 @@ function App() {
             path="/"
             element={
               <RutaPrivada usuario={usuario}>
-                <p>Bienvenido, {usuario?.nombre || 'usuario'} 😊</p>
+                <p>Bienvenido, {usuario?.nombre || "usuario"} 😊</p>
               </RutaPrivada>
             }
           />
