@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './Login.css';
 
 function Login({ onLogin }) {
@@ -6,12 +7,14 @@ function Login({ onLogin }) {
   const [clave, setPassword] = useState("");
   const [error, setError] = useState("");
   const [recuerdame, setRecuerdame] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (usuario === "usuario" && clave === "12345") {
       onLogin(usuario);
+      navigate('/');
     } else {
       setError("Usuario o contraseña incorrectos");
     }
@@ -56,7 +59,7 @@ function Login({ onLogin }) {
             marginBottom: "0.5rem",
           }}
         >
-          Inicar con Google
+          Iniciar con Google
         </button>
         <br />
         <a className="registro" href="/registro">¿No tienes cuenta? Regístrate</a>
