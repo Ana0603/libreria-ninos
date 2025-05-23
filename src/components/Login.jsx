@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import './Login.css';
+import { AuthContext } from '../context/AuthContext';
 
-function Login({ onLogin }) {
+function Login() {
   const [usuario, setUsername] = useState("");
   const [clave, setPassword] = useState("");
   const [error, setError] = useState("");
   const [recuerdame, setRecuerdame] = useState(false);
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +21,7 @@ function Login({ onLogin }) {
         localStorage.setItem("usuario", JSON.stringify(usuarioLogueado));
       }
 
-      onLogin(usuarioLogueado);
+      login(usuarioLogueado);
       navigate('/');
     } else {
       setError("Usuario o contraseña incorrectos");
