@@ -21,7 +21,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main style={{ padding: '2rem' }}>
+      <main >
         <Routes>
           <Route path="/libros" element={<CatalogoLibros />} />
           <Route path="/libros/:id" element={<PaginaLibro />} />
