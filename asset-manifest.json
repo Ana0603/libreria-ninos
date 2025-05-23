@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/libreria-ninos/static/css/main.f855e6bc.css",
+    "main.js": "/libreria-ninos/static/js/main.c6cdf50a.js",
+    "static/js/453.de454315.chunk.js": "/libreria-ninos/static/js/453.de454315.chunk.js",
+    "static/media/logo.svg": "/libreria-ninos/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/libreria-ninos/index.html",
+    "main.f855e6bc.css.map": "/libreria-ninos/static/css/main.f855e6bc.css.map",
+    "main.c6cdf50a.js.map": "/libreria-ninos/static/js/main.c6cdf50a.js.map",
+    "453.de454315.chunk.js.map": "/libreria-ninos/static/js/453.de454315.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.c6cdf50a.js"
+  ]
+}
