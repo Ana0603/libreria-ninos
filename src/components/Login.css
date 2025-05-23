@@ -5,7 +5,7 @@
   background: #fffcec;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-align-content: center;
+  align-content: center;
 }
 
 .login-titulo {
@@ -20,14 +20,7 @@ align-content: center;
   gap: 1rem;
 }
 
-.input-usuario {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #90a686;
-  background-color: #ffffff;
-  border-radius: 5px;
-  font-size: 1rem;
-}
+.input-usuario,
 .input-clave {
   width: 100%;
   padding: 0.7rem;

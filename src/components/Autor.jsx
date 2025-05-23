@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Autor.css';
 
 const Autor = ({autor}) => {
@@ -10,7 +11,7 @@ const Autor = ({autor}) => {
           <h1 className="card-title card_titulo_autor">{autor.nombre_autor}</h1>
           <p className="card-text">Número de libros: {autor.numero_libros}</p>
           <p className="card-text">País: {autor.nacionalidad}</p>
-          <a href="#" class="btn btn-primary">Ver {autor.nombre_autor}</a>
+          <Link to={`/autor/${autor.id_autor}`} className="btn btn-primary">Ver {autor.nombre_autor}</Link>
         </div>
       </div>
     </div>
