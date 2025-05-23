@@ -8,7 +8,7 @@ function App() {
     <div>
       <Header />
       <main>
-        {'Hola esto es un ejemplo de una libreria de niños - 3'}
+        {'Hola esto es un ejemplo de una libreria de niños - 4'}
 
 
 
