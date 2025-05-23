@@ -1,16 +1,11 @@
-import Autor from "../components/Autor.jsx";
-import { autores } from "../data/data_autores.js";
+import useAutores from "../hooks/useAutores.js";
 
 
-const ficha_autor = () => {
+const Vista_autor = ({autor}) => {
   return (
-    <div className="container mt-4">
-     <div className="row">
-        {autores.map((autor) => (
-          <Autor key={autor.id} autor={autor}/>
-        ))}
-      </div>
+    <div className="container-fluid">
+    Esto es una página del autor.
       </div>
   );
 }
-export default ficha_autor;
+export default Vista_autor;

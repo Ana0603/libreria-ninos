@@ -8,6 +8,7 @@ import CatalogoLibros from "./views/CatalogoLibros";
 import PaginaLibro from "./views/PaginaLibro";
 import Contacto from "./components/Contacto";
 import Landing_Autores from "./views/Landing_Autores";
+import Vista_autor from "./views/Vista_autor";
 import RutaPrivada from "./components/RutaPrivada";
 
 function App() {
@@ -19,15 +20,15 @@ function App() {
 
       <main>
         <Routes>
-          {/* Ruta pública de login */}
+          {/* Ruta pública */}
           <Route path="/login" element={<Login onLogin={setUsuario} />} />
 
-          {/* Rutas privadas protegidas */}
+          {/* Rutas privadas */}
           <Route
             path="/"
             element={
               <RutaPrivada usuario={usuario}>
-                <p>Bienvenido, {usuario} 😊</p>
+                <p>Bienvenido, {usuario?.nombre || 'usuario'} 😊</p>
               </RutaPrivada>
             }
           />
@@ -55,6 +56,15 @@ function App() {
             element={
               <RutaPrivada usuario={usuario}>
                 <Landing_Autores />
+              </RutaPrivada>
+            }
+          />
+
+          <Route
+            path="/autor/:id"
+            element={
+              <RutaPrivada usuario={usuario}>
+                <Vista_autor />
               </RutaPrivada>
             }
           />
