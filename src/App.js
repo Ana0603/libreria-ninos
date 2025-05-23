@@ -8,6 +8,8 @@ import CatalogoLibros from './views/CatalogoLibros';
 import FichaLibro from './components/FichaLibro';
 import Contacto from './components/Contacto';
 import Landing_Autores from './views/Landing_Autores';
+import PaginaLibro from './views/PaginaLibro';
+
 
 function App() {
   const [usuario, setUsuario] = useState(null);
@@ -22,7 +24,7 @@ function App() {
       <main style={{ padding: '2rem' }}>
         <Routes>
           <Route path="/libros" element={<CatalogoLibros />} />
-          <Route path="/libros/:id" element={<FichaLibro />} />
+          <Route path="/libros/:id" element={<PaginaLibro />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/autores" element={<Landing_Autores />} />
           <Route path="/" element={<p>Bienvenido, {usuario.nombre || 'usuario'} 😊</p>} />

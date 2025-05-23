@@ -1,0 +1,46 @@
+.catalogo-libros {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .catalogo-libros h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Botones de filtro */
+  .filtros-categorias {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .btn-filtro {
+    background-color: #eee;
+    color: #333;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .btn-filtro:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .btn-filtro.activo {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  /* Grid de libros */
+  .libros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(281px, 1fr));
+    gap: 0.3rem;
+  }
+  
