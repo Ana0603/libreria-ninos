@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Contacto.css';
+import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,59 +24,65 @@ const Contact = () => {
 
   return (
     <div className="contenedor-contacto">
-      <h2 className="titulo-contacto">Contáctanos</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="inputs-contacto">Nombre</label>
-          <input
-            type="text"
-            name="nombre"
-            onChange={handleChange}
-            value={formData.name}
-            className="w-full border px-3 py-2 rounded"
-            required
-          />
+      <div className="contacto-izquierda">
+        <div className="caja-pregunta">
+          <h2>¿Tienes preguntas?</h2>
+          <p>Contáctanos a través del formulario o en nuestras redes sociales.</p>
+          <div className="btn-redes">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+            <a href="https://wa.me/123456789" target="_blank" rel="noreferrer"><FaWhatsapp /></a>
+          </div>
         </div>
-        <div>
-          <label className="inputs-contacto">Asunto</label>
-          <input
-            type="text"
-            name="asunto"
-            onChange={handleChange}
-            value={formData.asunto}
-            className="w-full border px-3 py-2 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="inputs-contacto">Correo</label>
-          <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            value={formData.email}
-            className="w-full border px-3 py-2 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="inputs-contacto">Mensaje</label>
-          <textarea
-            name="message"
-            onChange={handleChange}
-            value={formData.message}
-            className="w-full border px-3 py-2 rounded"
-            rows="4"
-            required
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="btn-enviar"
-        >
-          Enviar
-        </button>
-      </form>
+      </div>
+      <div className="contacto-derecha">
+        <h2 className="titulo-contacto">Contáctanos</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="inputs-contacto">Nombre</label>
+            <input
+              type="text"
+              name="name"
+              onChange={handleChange}
+              value={formData.name}
+              required
+            />
+          </div>
+          <div>
+            <label className="inputs-contacto">Asunto</label>
+            <input
+              type="text"
+              name="asunto"
+              onChange={handleChange}
+              value={formData.asunto}
+              required
+            />
+          </div>
+          <div>
+            <label className="inputs-contacto">Correo</label>
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={formData.email}
+              required
+            />
+          </div>
+          <div>
+            <label className="inputs-contacto">Mensaje</label>
+            <textarea
+              name="message"
+              onChange={handleChange}
+              value={formData.message}
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" className="btn-enviar">
+            Enviar
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
