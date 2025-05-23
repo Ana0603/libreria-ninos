@@ -18,7 +18,7 @@ const Header = () => {
 
 const styles = {
   header: {
-    backgroundColor: '#282c34',
+    backgroundColor: '#D9967E',
     padding: '1rem 2rem',
     display: 'flex',
     justifyContent: 'space-between',
