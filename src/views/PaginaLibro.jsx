@@ -50,12 +50,15 @@ const PaginaLibro = () => {
         </div>
       </div>
 
-      <h2 className="titulo-relacionados">Productos relacionados</h2>
+      <h2 className="titulo-relacionados">Libros relacionados</h2>
       <div className="productos-relacionados">
         {relacionados.map(rel => (
           <Link to={`/libros/${rel.id}`} key={rel.id} className="tarjeta-relacionado">
             <img src={rel.imagen} alt={rel.titulo} />
             <p>{rel.titulo}</p>
+            <p>{rel.autor}</p>
+            <p>{rel.anio}</p>
+
           </Link>
         ))}
       </div>

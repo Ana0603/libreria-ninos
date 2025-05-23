@@ -1,46 +1,58 @@
-.catalogo-libros {
+:root {
+    --verde-principal: #90A686;
+    --verde-claro: #B9BF8E;
+    --beige: #D9D3B8;
+    --coral: #D9967E;
+    --gris-fondo: #F2F2F2;
+    --texto: #222;
+  }
+  
+  .catalogo-libros {
     padding: 2rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--texto);
+    background-color: var(--gris-fondo);
     max-width: 1200px;
     margin: 0 auto;
   }
   
   .catalogo-libros h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--verde-principal);
   }
   
-  /* Botones de filtro */
   .filtros-categorias {
-    margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
   }
   
   .btn-filtro {
-    background-color: #eee;
-    color: #333;
-    border: none;
+    background-color: white;
+    border: 1px solid var(--beige);
+    color: var(--texto);
     padding: 0.4rem 1rem;
     border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
     font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
   }
   
   .btn-filtro:hover {
-    background-color: #d0d0d0;
+    background-color: var(--beige);
   }
   
   .btn-filtro.activo {
-    background-color: #4a90e2;
+    background-color: var(--verde-principal);
     color: white;
+    border-color: var(--verde-principal);
   }
   
-  /* Grid de libros */
   .libros-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(281px, 1fr));
-    gap: 0.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
   }
   

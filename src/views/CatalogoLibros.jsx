@@ -1,23 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import FichaLibro from '../components/FichaLibro';
-import './CatalogoLibros.css'; // si tienes estilos
+import React, { useEffect, useState } from "react";
+import FichaLibro from "../components/FichaLibro";
+import "./CatalogoLibros.css"; // si tienes estilos
 
 const CatalogoLibros = () => {
   const [libros, setLibros] = useState([]);
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todas');
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todas");
 
   useEffect(() => {
-    fetch('https://mock.apidog.com/m1/879682-861157-default/libros')
-      .then(res => res.json())
-      .then(data => setLibros(data));
+    fetch("https://mock.apidog.com/m1/879682-861157-default/libros")
+      .then((res) => res.json())
+      .then((data) => setLibros(data));
   }, []);
 
-  const categoriasUnicas = ['Todas', ...new Set(libros.map(libro => libro.categoria))];
+  const categoriasUnicas = [
+    "Todas",
+    ...new Set(libros.map((libro) => libro.categoria)),
+  ];
 
   const librosFiltrados =
-    categoriaSeleccionada === 'Todas'
+    categoriaSeleccionada === "Todas"
       ? libros
-      : libros.filter(libro => libro.categoria === categoriaSeleccionada);
+      : libros.filter((libro) => libro.categoria === categoriaSeleccionada);
 
   return (
     <div className="catalogo-libros">
@@ -28,7 +31,9 @@ const CatalogoLibros = () => {
         {categoriasUnicas.map((categoria, idx) => (
           <button
             key={idx}
-            className={`btn-filtro ${categoriaSeleccionada === categoria ? 'activo' : ''}`}
+            className={`btn-filtro ${
+              categoriaSeleccionada === categoria ? "activo" : ""
+            }`}
             onClick={() => setCategoriaSeleccionada(categoria)}
           >
             {categoria}
@@ -38,8 +43,9 @@ const CatalogoLibros = () => {
 
       {/* Grid de libros */}
       <div className="libros-grid">
-        {librosFiltrados.map(libro => (
+        {librosFiltrados.map((libro) => (
           <FichaLibro
+            key={libro.id}
             id={libro.id}
             titulo={libro.titulo}
             categoria={libro.categoria}
