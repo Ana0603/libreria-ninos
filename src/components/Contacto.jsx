@@ -1,9 +1,10 @@
-// src/Contact.js
 import React, { useState } from "react";
+import './Contacto.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
+    asunto: "",
     email: "",
     message: ""
   });
@@ -18,18 +19,17 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Formulario enviado:", formData);
-    // Aquí puedes enviar los datos a un backend o un servicio externo
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-xl">
-      <h2 className="text-2xl font-bold mb-4">Contacto</h2>
+    <div className="contenedor-contacto">
+      <h2 className="titulo-contacto">Contáctanos</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block">Nombre</label>
+          <label className="inputs-contacto">Nombre</label>
           <input
             type="text"
-            name="name"
+            name="nombre"
             onChange={handleChange}
             value={formData.name}
             className="w-full border px-3 py-2 rounded"
@@ -37,7 +37,18 @@ const Contact = () => {
           />
         </div>
         <div>
-          <label className="block">Correo</label>
+          <label className="inputs-contacto">Asunto</label>
+          <input
+            type="text"
+            name="asunto"
+            onChange={handleChange}
+            value={formData.asunto}
+            className="w-full border px-3 py-2 rounded"
+            required
+          />
+        </div>
+        <div>
+          <label className="inputs-contacto">Correo</label>
           <input
             type="email"
             name="email"
@@ -48,7 +59,7 @@ const Contact = () => {
           />
         </div>
         <div>
-          <label className="block">Mensaje</label>
+          <label className="inputs-contacto">Mensaje</label>
           <textarea
             name="message"
             onChange={handleChange}
@@ -60,7 +71,7 @@ const Contact = () => {
         </div>
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="btn-enviar"
         >
           Enviar
         </button>
