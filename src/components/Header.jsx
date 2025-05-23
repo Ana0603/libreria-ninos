@@ -21,14 +21,17 @@ const styles = {
   header: {
     backgroundColor: '#D9967E',
     padding: '1rem 2rem',
+    margin: '20px',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    color: 'white'
+    color: 'white',
+    borderRadius: '10px',
+    boxShadow: '0 2px 6px rgba(0,0,0,0.15)'
   },
   logo: {
     margin: 0,
-    fontSize: '1.5rem'
+    fontSize: '1.7rem'
   },
   navList: {
     listStyle: 'none',

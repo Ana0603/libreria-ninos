@@ -14,6 +14,7 @@ function App() {
   const [usuario, setUsuario] = useState(null);
 
   return (
+   
     <BrowserRouter>
       {usuario && <Header />}
       <main style={{ padding: '2rem' }}>
