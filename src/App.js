@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+
+import { AuthContext } from "./context/AuthContext";
 
 import Header from "./components/Header";
 import Login from "./components/Login";
@@ -12,7 +14,7 @@ import Vista_autor from "./views/Vista_autor";
 import RutaPrivada from "./components/RutaPrivada";
 
 function App() {
-  const [usuario, setUsuario] = useState(null);
+  const { usuario } = useContext(AuthContext);
 
   return (
     <BrowserRouter>
@@ -21,14 +23,14 @@ function App() {
       <main>
         <Routes>
           {/* Ruta pública */}
-          <Route path="/login" element={<Login onLogin={setUsuario} />} />
+          <Route path="/login" element={<Login />} />
 
           {/* Rutas privadas */}
           <Route
             path="/"
             element={
               <RutaPrivada usuario={usuario}>
-                <p>Bienvenido, {usuario?.nombre || 'usuario'} 😊</p>
+                <p>Bienvenido, {usuario?.nombre || "usuario"} 😊</p>
               </RutaPrivada>
             }
           />
