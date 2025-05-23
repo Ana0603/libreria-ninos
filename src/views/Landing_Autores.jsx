@@ -3,11 +3,10 @@ import useAutores from "../hooks/useAutores.js";
 
 
 const Vista_autores = () => {
-  const { autoresData, loading, error } = useAutores();
+  const { autoresData, loading } = useAutores();
   if (loading) {
     return <div className="container-fluid d-flex justify-content-center">
      <div className="spinner-grow" role="status">
-  <span className="sr-only">Cargando...</span>
 </div>
 </div>
   }

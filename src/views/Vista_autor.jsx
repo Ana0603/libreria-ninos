@@ -1,7 +1,7 @@
 import useAutores from "../hooks/useAutores.js";
 
 
-const Vista_autor = ({}) => {
+const Vista_autor = () => {
   const { autorData } = useAutores();
   return (
     <div className="container-fluid">
