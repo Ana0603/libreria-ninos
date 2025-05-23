@@ -15,7 +15,7 @@ function App() {
     <div>
       <Header />
       <main>
-        {`Hola ${usuario}, esto es un ejemplo de una libreria de niños`}
+        {'Hola esto es un ejemplo de una libreria de niños'}
       </main>
     </div>
   );
