@@ -1,5 +1,5 @@
-// src/pages/Home.jsx
 import React from 'react';
+import './Home.css';
 import Header from '../components/Header';
 
 const books = [
@@ -10,16 +10,26 @@ const books = [
 
 const Home = ({ usuario }) => {
     return (
-      <div className="bg-purple-100 min-h-screen p-4">
-        <h1 className="text-2xl font-bold text-center mb-6">👋 ¡Hola, {usuario?.nombre || 'explorador'}!</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {books.map((book, i) => (
-            <div
-              key={i}
-              className="bg-white p-4 rounded-xl shadow hover:shadow-xl transition cursor-pointer text-center"
-            >
-              <div className="text-5xl">{book.emoji}</div>
-              <p className="mt-2 font-semibold">{book.title}</p>
+      <div className="home-container">
+        <section className="welcome-section">
+          <div className="welcome-text">
+            <h2>👋 ¡Bienvenido, {usuario?.nombre || 'explorador'}!</h2>
+            <h3>Explora libros divertidos y educativos 📚</h3>
+            <p>Encuentra tus personajes favoritos y descubre historias mágicas mientras aprendes.</p>
+            <button disabled className="welcome-button">Explorar libros</button>
+          </div>
+          <div className="welcome-image">
+            <img src="/images/Banner1.png" alt="Ilustración bienvenida" />
+          </div>
+        </section>
+  
+        <h2>Libros disponibles</h2>
+        <div className="card-container">
+          {books.map((book, index) => (
+            <div className="card" key={index}>
+              <div className="emoji">{book.emoji}</div>
+              <h3>{book.title}</h3>
+              <button disabled className="disabled-button">Leer</button>
             </div>
           ))}
         </div>
