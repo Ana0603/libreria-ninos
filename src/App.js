@@ -18,7 +18,6 @@ function App() {
       {usuario && <Header />}
       <main style={{ padding: '2rem' }}>
         <Routes>
-          {/* Ruta del login */}
           <Route
             path="/"
             element={
@@ -26,7 +25,6 @@ function App() {
             }
           />
 
-          {/* Ruta protegida del home */}
           <Route
             path="/home"
             element={
@@ -34,7 +32,6 @@ function App() {
             }
           />
 
-          {/* Rutas adicionales (no protegidas en este ejemplo) */}
           <Route path="/libros" element={<CatalogoLibros />} />
           <Route path="/libros/:id" element={<FichaLibro />} />
           <Route path="/contacto" element={<Contacto />} />

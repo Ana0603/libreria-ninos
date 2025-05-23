@@ -19,11 +19,14 @@ const Home = ({ usuario }) => {
             <button disabled className="welcome-button">Explorar libros</button>
           </div>
           <div className="welcome-image">
-            <img src="/images/Banner1.png" alt="Ilustración bienvenida" />
+            <img src="https://via.placeholder.com/300x100.png?text=Banner+de+Prueba" alt="Ilustración bienvenida" />
           </div>
         </section>
+
+        <hr />
+        <br />
   
-        <h2>Libros disponibles</h2>
+        <h2>¿Qué hay de nuevo?</h2>
         <div className="card-container">
           {books.map((book, index) => (
             <div className="card" key={index}>
