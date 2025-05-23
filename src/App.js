@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Login from './components/Login';
 import CatalogoLibros from './views/CatalogoLibros';
 import FichaLibro from './components/FichaLibro';
+import Contacto from './components/Contacto';
 
 function App() {
   const [usuario, setUsuario] = useState(null);
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/libros" element={<CatalogoLibros />} />
           <Route path="/libros/:id" element={<FichaLibro />} />
+          <Route path="/contacto" element={<Contacto />} />
           <Route path="/" element={<p>Bienvenido, {usuario.nombre || 'usuario'} 😊</p>} />
         </Routes>
       </main>
