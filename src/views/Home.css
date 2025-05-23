@@ -3,7 +3,7 @@
   }
   
   /* Hero section */
-  .hero-section {
+  .home-hero-section {
     background-image: url('https://elfarolero.ec/wp-content/uploads/2024/11/fondo-ninos.webp');
     background-size: cover;
     background-position: center;
@@ -15,24 +15,24 @@
     text-align: center;
   }
   
-  .hero-overlay {
+  .home-hero-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 2rem 3rem;
     border-radius: 12px;
   }
   
-  .hero-title {
+  .home-hero-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   
-  .hero-subtitle {
+  .home-hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
   }
   
-  .btn-ver-libros {
+  .home-btn-ver-libros {
     background: #D9967E;
     color: white;
     text-decoration: none;
@@ -41,37 +41,37 @@
     font-weight: bold;
   }
   
-  .btn-ver-libros:hover {
+  .home-btn-ver-libros:hover {
     background: #b57864;
   }
   
   /* Bienvenida */
-  .welcome-text {
+  .home-welcome-text {
     text-align: center;
     padding: 2rem;
     color: #90A686;
   }
   
   /* Mini catálogo */
-  .mini-catalogo {
+  .home-mini-catalogo {
     padding: 3rem 2rem;
     background: #F2F2F2;
     text-align: center;
   }
   
-  .mini-catalogo h2 {
+  .home-mini-catalogo h2 {
     color: #90A686;
     margin-bottom: 2rem;
   }
   
-  .libros-grid {
+  .home-libros-grid {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
   }
   
-  .libro-card {
+  .home-libro-card {
     background: white;
     padding: 1rem;
     border-radius: 8px;
@@ -80,14 +80,14 @@
     text-align: center;
   }
   
-  .libro-card img {
+  .home-libro-card img {
     width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
     border-radius: 4px;
   }
   
-  .btn-detalle {
+  .home-btn-detalle {
     display: inline-block;
     margin-top: 0.5rem;
     font-size: 0.9rem;
@@ -95,7 +95,7 @@
     text-decoration: none;
   }
   
-  .btn-detalle:hover {
+  .home-btn-detalle:hover {
     text-decoration: underline;
   }
   
