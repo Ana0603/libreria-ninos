@@ -1,16 +1,28 @@
 import Autor from "../components/Autor";
-import { autores } from "../data/data_autores.js";
+import useAutores from "../hooks/useAutores.js";
 
 
-const vista_autores = () => {
+const Vista_autores = () => {
+  const { autoresData, loading, error } = useAutores();
+  if (loading) {
+    return <div className="container-fluid d-flex justify-content-center">
+     <div className="spinner-grow" role="status">
+  <span className="sr-only">Cargando...</span>
+</div>
+</div>
+  }
+  if (error) {
+    return <div className="container mt-4"><h1>Error al cargar los autores</h1></div>;
+  }
+
   return (
     <div className="container mt-4">
      <div className="row">
-        {autores.map((autor) => (
+        {autoresData.map((autor) => (
           <Autor key={autor.id} autor={autor}/>
         ))}
       </div>
       </div>
   );
 }
-export default vista_autores;
+export default Vista_autores;

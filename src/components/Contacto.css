@@ -1,0 +1,94 @@
+.contenedor-contacto {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contacto-izquierda {
+  flex: 1;
+  background-image: url(../../public/images/fondo-contacto.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.caja-pregunta {
+  background-color:rgba(144, 166, 134, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.caja-pregunta h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  opacity: 1;
+}
+
+.btn-redes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  opacity: 1;
+}
+
+.btn-redes a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.btn-redes a:hover {
+  font-size: 1.7rem;
+}
+.contacto-derecha {
+  flex: 1;
+  background-color: #fffef5;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo-contacto {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #90a686;
+  margin-bottom: 2rem;
+}
+
+.inputs-contacto {
+  font-weight: bold;
+  color: #444;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-enviar {
+  margin-top: 1rem;
+  background-color: #90a686;
+  color: white;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-enviar:hover {
+  background-color: #6e8564;
+}

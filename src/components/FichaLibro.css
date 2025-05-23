@@ -1,22 +1,65 @@
+:root {
+  --verde-principal: #90A686;
+  --verde-claro: #B9BF8E;
+  --beige: #D9D3B8;
+  --coral: #D9967E;
+  --gris-fondo: #F2F2F2;
+  --texto: #222;
+}
+
 .ficha-libro {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    width: 200px;
-    text-align: center;
-  }
-  
-  .ficha-libro img {
-    width: 100%;
-    border-radius: 5px;
-  }
-  
-  .ficha-libro h3 {
-    margin-top: 0.5rem;
-  }
-  
-  .ficha-libro button {
-    margin-top: 0.5rem;
-    padding: 0.4rem 1rem;
-  }
-  
+  background-color: white;
+  border: 1px solid var(--beige);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--texto);
+}
+
+.ficha-libro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ficha-libro-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--gris-fondo);
+}
+
+.ficha-libro-titulo {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--verde-principal);
+}
+
+.ficha-libro p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.ficha-libro-sinopsis {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.btn-ver-detalle {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background-color: var(--coral);
+  color: white;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-detalle:hover {
+  background-color: var(--verde-principal);
+}

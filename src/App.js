@@ -9,6 +9,8 @@ import FichaLibro from './components/FichaLibro';
 import Home from './views/Home';
 import Contacto from './components/Contacto';
 import Landing_Autores from './views/Landing_Autores';
+import PaginaLibro from './views/PaginaLibro';
+
 
 function App() {
   const [usuario, setUsuario] = useState(null);
@@ -18,6 +20,8 @@ function App() {
     <BrowserRouter>
       {usuario && <Header />}
       <main style={{ padding: '2rem' }}>
+      <Header />
+      <main >
         <Routes>
           <Route
             path="/"
@@ -34,7 +38,7 @@ function App() {
           />
 
           <Route path="/libros" element={<CatalogoLibros />} />
-          <Route path="/libros/:id" element={<FichaLibro />} />
+          <Route path="/libros/:id" element={<PaginaLibro />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/autores" element={<Landing_Autores />} />
         </Routes>

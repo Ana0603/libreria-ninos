@@ -1,0 +1,125 @@
+:root {
+  --verde-principal: #90A686;
+  --verde-claro: #B9BF8E;
+  --beige: #D9D3B8;
+  --coral: #D9967E;
+  --gris-fondo: #F2F2F2;
+  --texto: #222;
+}
+
+.pagina-libro {
+  padding: 2rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--gris-fondo);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contenedor-detalle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.imagen-libro img {
+  max-width: 320px;
+  width: 100%;
+  border: 2px solid var(--beige);
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.info-libro {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-libro h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--verde-principal);
+}
+
+.precio {
+  font-size: 1.2rem;
+  color: var(--texto);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.resumen {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.ficha-tecnica {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.ficha-tecnica li {
+  margin-bottom: 0.5rem;
+}
+
+.btn-carrito {
+  background-color: var(--coral);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-carrito:hover {
+  background-color: var(--verde-principal);
+}
+
+.titulo-relacionados {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--verde-claro);
+}
+
+.productos-relacionados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.tarjeta-relacionado {
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--texto);
+  background-color: white;
+  border: 1px solid var(--beige);
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.5rem;
+}
+
+.tarjeta-relacionado img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta-relacionado:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-relacionado p {
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 500;
+}
