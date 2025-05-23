@@ -22,8 +22,7 @@ function App() {
         <Routes>
         <Route path="/" element={<Home usuario={usuario} />} />
           <Route path="/libros" element={<CatalogoLibros />} />
-          <Route path="/libros/:id" element={<FichaLibro />} />
-          
+          <Route path="/libros/:id" element={<FichaLibro />} />         
         </Routes>
       </main>
     </BrowserRouter>

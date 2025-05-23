@@ -3,11 +3,12 @@ import React from 'react';
 const Header = () => {
   return (
     <header style={styles.header}>
-      <h1 style={styles.logo}>Mi Sitio</h1>
+      <h1 style={styles.logo}>Libreria niños</h1>
       <nav>
         <ul style={styles.navList}>
           <li><a href="/" style={styles.link}>Inicio</a></li>
-          <li><a href="/libros" style={styles.link}>Libros</a></li>
+          <li><a href="/CatalogoLibros" style={styles.link}>Categorias</a></li>
+          <li><a href="/CatalogoLibros" style={styles.link}>Autores</a></li>
           <li><a href="/contacto" style={styles.link}>Contacto</a></li>
         </ul>
       </nav>
