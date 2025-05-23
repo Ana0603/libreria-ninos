@@ -5,7 +5,7 @@ const Vista_autor = ({}) => {
   const { autorData } = useAutores();
   return (
     <div className="container-fluid">
-    Esto es una página del autor. {autor.nombre_autor}
+    Esto es una página del autor.
       </div>
   );
 }
