@@ -12,6 +12,7 @@ import Contacto from "./components/Contacto";
 import Landing_Autores from "./views/Landing_Autores";
 import Vista_autor from "./views/Vista_autor";
 import RutaPrivada from "./components/RutaPrivada";
+import Home from "./views/Home";
 
 function App() {
   const { usuario } = useContext(AuthContext);
@@ -26,14 +27,7 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           {/* Rutas privadas */}
-          <Route
-            path="/"
-            element={
-              <RutaPrivada usuario={usuario}>
-                <p>Bienvenido, {usuario?.nombre || "usuario"} 😊</p>
-              </RutaPrivada>
-            }
-          />
+       
 
           <Route
             path="/libros"
@@ -58,6 +52,14 @@ function App() {
             element={
               <RutaPrivada usuario={usuario}>
                 <Landing_Autores />
+              </RutaPrivada>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <RutaPrivada usuario={usuario}>
+                <Home />
               </RutaPrivada>
             }
           />

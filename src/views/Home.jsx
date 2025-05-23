@@ -1,43 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
-import Header from '../components/Header';
+import { AuthContext } from '../context/AuthContext';
 
-const books = [
-  { title: 'Libros en nuevos', img: '📘' },
-  { title: 'Libros en promoción', img: '🍪' },
-  { title: 'Más populares', img: '🐞' },
-];
+const Home = () => {
+  const { usuario } = useContext(AuthContext);
+  const [libros, setLibros] = useState([]);
 
-const Home = ({ usuario }) => {
-    return (
-      <div className="home-container">
-        <section className="welcome-section">
-          <div className="welcome-text">
-            <h2>👋 ¡Bienvenido, {usuario?.nombre || 'explorador'}!</h2>
-            <h3>Explora libros divertidos y educativos 📚</h3>
-            <p>Encuentra tus personajes favoritos y descubre historias mágicas mientras aprendes.</p>
-            <button disabled className="welcome-button">Explorar libros</button>
-          </div>
-          <div className="welcome-image">
-            <img src="https://via.placeholder.com/300x100.png?text=Banner+de+Prueba" alt="Ilustración bienvenida" />
-          </div>
-        </section>
+  useEffect(() => {
+    fetch('https://mock.apidog.com/m1/879682-861157-default/libros')
+      .then(res => res.json())
+      .then(data => setLibros(data.slice(0, 3))); // Mostrar solo 3 libros
+  }, []);
 
-        <hr />
-        <br />
-  
-        <h2>¿Qué hay de nuevo?</h2>
-        <div className="card-container">
-          {books.map((book, index) => (
-            <div className="card" key={index}>
-              <div className="emoji">{book.emoji}</div>
-              <h3>{book.title}</h3>
-              <button disabled className="disabled-button">Leer</button>
+  return (
+    <div className="home-container">
+
+      {/* Hero */}
+      <section className="hero-section">
+        <div className="hero-overlay">
+          <h1 className="hero-title">Colecciones fantásticas</h1>
+          <p className="hero-subtitle">Libros para todas las edades</p>
+          <Link to="/libros" className="btn-ver-libros">Ver todos los libros</Link>
+        </div>
+      </section>
+
+      {/* Bienvenida */}
+      <section className="welcome-text">
+        <h2>👋 ¡Hola, {usuario?.nombre || 'explorador'}!</h2>
+        <p>Explora libros divertidos y educativos 📚<br />Descubre historias mágicas mientras aprendes.</p>
+      </section>
+
+      {/* Catálogo resumido */}
+      <section className="mini-catalogo">
+        <h2>Algunos de nuestros libros</h2>
+        <div className="libros-grid">
+          {libros.map(libro => (
+            <div className="libro-card" key={libro.id}>
+              <img src={libro.imagen} alt={libro.titulo} />
+              <h3>{libro.titulo}</h3>
+              <p>{libro.categoria}</p>
+              <Link to={`/libros/${libro.id}`} className="btn-detalle">Ver más</Link>
             </div>
           ))}
         </div>
-      </div>
-    );
-  };
-  
+      </section>
+    </div>
+  );
+};
+
 export default Home;
