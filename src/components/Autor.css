@@ -1,0 +1,15 @@
+.foto_autor {
+  width: 120px !important;
+  height: auto;
+  border-radius: 50%;
+}
+
+.card_titulo_autor {
+  font-size: 1.5rem !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-width {
+  width: 18rem;
+}
