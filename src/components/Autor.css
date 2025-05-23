@@ -1,6 +1,6 @@
 .foto_autor {
   width: 120px !important;
-  height: auto;
+  height:150px !important;
   border-radius: 50%;
 }
 
@@ -8,8 +8,10 @@
   font-size: 1.5rem !important;
   font-weight: bold;
   text-align: center;
+  color: #90a686 !important;
 }
 
 .card-width {
   width: 18rem;
+  background-color: #fffcec;
 }
