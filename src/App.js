@@ -9,6 +9,7 @@ import FichaLibro from './components/FichaLibro';
 import Contacto from './components/Contacto';
 import Landing_Autores from './views/Landing_Autores';
 import PaginaLibro from './views/PaginaLibro';
+import Vista_autor from './views/Vista_autor';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/libros/:id" element={<PaginaLibro />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/autores" element={<Landing_Autores />} />
+          <Route path="/autor/:id" element={<Vista_autor />} />
           <Route path="/" element={<p>Bienvenido, {usuario.nombre || 'usuario'} 😊</p>} />
         </Routes>
       </main>
