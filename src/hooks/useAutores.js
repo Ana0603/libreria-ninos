@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { autores } from '../data/data_autores';
+
+
 
 const useAutores = () => {
   const [autoresData, setAutoresData] = useState([]);
@@ -12,9 +12,10 @@ const useAutores = () => {
         setLoading(true);
       try {
         await new Promise(resolve => setTimeout(resolve, 2000));
-        const response = await axios.get('https://mock.apidog.com/m1/879682-861157-default/autores');
-
-        setAutoresData(autores);
+        const response = await fetch('https://mock.apidog.com/m1/879682-861157-default/autores');
+        if (!response.ok) throw new Error('Error al obtener los datos');
+        const data = await response.json();
+        setAutoresData(data);
       } catch (err) {
         setError(err);
       } finally {
