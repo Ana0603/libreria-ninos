@@ -8,8 +8,10 @@
   font-size: 1.5rem !important;
   font-weight: bold;
   text-align: center;
+  color: #90a686 !important;
 }
 
 .card-width {
   width: 18rem;
+  background-color: #fffcec;
 }
