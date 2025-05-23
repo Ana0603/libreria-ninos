@@ -9,7 +9,7 @@ function Login({ onLogin }) {
     e.preventDefault();
 
     if (usuario === "usuario" && clave === "12345") {
-      onLogin(usuario);
+      onLogin({ nombre: usuario }); // ✅ aquí pasamos un objeto
     } else {
       setError("Usuario o contraseña incorrectos");
     }
