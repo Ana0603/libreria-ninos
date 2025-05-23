@@ -7,17 +7,10 @@ const Header = () => {
       <h1 style={styles.logo}>Libreria niños</h1>
       <nav>
         <ul style={styles.navList}>
-<<<<<<< HEAD
-          <li><a href="/" style={styles.link}>Inicio</a></li>
-          <li><a href="/CatalogoLibros" style={styles.link}>Categorias</a></li>
-          <li><a href="/CatalogoLibros" style={styles.link}>Autores</a></li>
-          <li><a href="/contacto" style={styles.link}>Contacto</a></li>
-=======
           <li><Link to="/" style={styles.link}>Inicio</Link></li>
           <li><Link to="/libros" style={styles.link}>Libros</Link></li>
           <li><Link to="/autores" style={styles.link}>Autores</Link></li>
           <li><Link to="/contacto" style={styles.link}>Contacto</Link></li>
->>>>>>> 74a6747d2d0e5c15eac69e1df0b057488d7cbd5b
         </ul>
       </nav>
     </header>

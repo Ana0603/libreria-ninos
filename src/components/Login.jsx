@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import './Login.css';
 
+import { useNavigate } from "react-router-dom";
+
 function Login({ onLogin }) {
   const [usuario, setUsername] = useState("");
   const [clave, setPassword] = useState("");
   const [error, setError] = useState("");
   const [recuerdame, setRecuerdame] = useState(false);
-
+  const navigate = useNavigate();
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (usuario === "usuario" && clave === "12345") {
       onLogin({ nombre: usuario }); 
+      console.log(clave, usuario);
+      navigate("/home");
     } else {
       setError("Usuario o contraseña incorrectos");
     }
