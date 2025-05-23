@@ -7,7 +7,6 @@ const Vista_autores = () => {
   if (loading) {
     return <div className="container-fluid d-flex justify-content-center">
      <div className="spinner-grow" role="status">
-  <span className="sr-only">Cargando...</span>
 </div>
 </div>
   }
